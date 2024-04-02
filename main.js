@@ -3,7 +3,7 @@ const btnEL = document.querySelectorAll('.btn');
 const custom = document.querySelector('#customTip');
 const noOfPeople = document.querySelector('#input-people'); 
 const errorEL = document.querySelector('#error');
-const totalVal = document.querySelectorAll('.total-val, .tip-val'); 
+const totalVal = document.querySelectorAll('.tip-val'); 
 const resetEL = document.querySelector('#reset');
 
 
@@ -64,16 +64,20 @@ function calculate ()  {
         let totalAmount = (billVal + tip) / pplVal;
         totalVal[0].textContent = '$' + tip.toFixed(2);
         totalVal[1].textContent = '$' + totalAmount.toFixed(2);
+        
+        if(tipVal === 0){
+            totalVal[0].textContent = '$0.00';
+            totalVal[1].textContent = '$0.00';    
+        }
     }
 }
 
 resetEL.addEventListener('click' , () => {
-    inputEL.value = '';
+    inputEL.value = 0.00;
     custom.value = '';
-    noOfPeople.value = 1;
+    noOfPeople.value = '';
     errorEL.innerHTML = '';
-    btnEL.forEach((btn) => btn.classList.remove('active'));
-    btnEL[0].classList.add('active'); 
-    tipVal = 0.15; 
+    btnEL[0].click();
+    tipVal = 0;
     calculate();
 })
