@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(185, 41%, 84%);
+    font-family: 'space Mono', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home{
+    background-color: hsl(0, 0%, 100%);
+    padding: 30px;
+    margin: 60px;
+    border-radius: 16px;
+}
+.home .input-wrapper, .home .input-wrapper-one{
+    position: relative;
+}
+.home .input-wrapper img, .home .input-wrapper-one img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 1.9rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input[type=text]{
+    background-color:  hsl(0, 0%, 100%);;
+}
+.home label{
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: 14px;
+}
+input[type=text]:hover{
+    background-color:  hsl(189, 41%, 97%);
+}
+.home .tip{
+    position: relative;
+    margin: 14px 0;
+}
+.home .list{
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center; */
+}
+.home .list li{
+   display: inline;
+}
+.home .list .btn{
+    background: hsl(183, 100%, 15%);
+    color: #fff;
+    width: 100px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.home .list .btn.active{
+    background: #fff;
+    color: hsl(183, 100%, 15%);
+}
+.home .list .btn:active{
+    transform: scale(1);
+}
+.home .list input{
+    background: hsl(185, 41%, 84%);
+    color: hsl(184, 14%, 56%);
+    width: 100px;
+    margin: 5px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 5px 5px 10px 5px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.home .list input:focus {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.home .list input:active {
+    background-color: hsl(185, 81%, 64%);
+    --text-color: hsl(184, 14%, 16%);
+}
+.home .list .btn:hover{
+   background-color:  hsl(172, 67%, 45%);
+}
+.second{
+    background: #00494d;
+    padding: 30px;
+    color: #fff;
+    border-radius: 16px;
+}
+.second .text-desc,
+.second .total-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+}
+.second .text-desc p,
+.second .total-desc p{
+    font-size: 14px ;
+    color: #fff;
+
+}
+.second span{
+    display: block;
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+}
+.second > .total-desc > .val,
+.second > .text-desc > .val{
+    font-size: 30px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+.second >  .btn{
+    background: #26c0ab;
+    color: #00494d;
+    width: 100%;
+    font-weight: 700;
+}
+#error{
+    color: red;
+    font-size: 12px;
+    float: inline-end;
+    margin-top: 6px;
+    font-weight: 500;
+}
